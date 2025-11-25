@@ -1,57 +1,58 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  MdLocalGasStation,
   MdLocalShipping,
   MdBusinessCenter,
   MdSecurity,
   MdAutorenew,
-  MdHeadsetMic
+  MdBubbleChart,
+  MdBuild
 } from "react-icons/md";
 
 export default function Services() {
   const services = [
     {
-      icon: <MdLocalGasStation className="text-red-600 text-5xl" />,
-      title: "New LPG Connection",
-      desc: "Quick and hassle-free new gas connection for homes and businesses with full documentation support."
+      icon: <MdBubbleChart className="text-red-600 text-5xl" />,
+      title: "Industrial Gas Supply",
+      desc: "Reliable supply of Oxygen, Nitrogen, Argon & CO₂ for workshops, labs, and industries."
     },
     {
       icon: <MdLocalShipping className="text-red-600 text-5xl" />,
       title: "Refill & Doorstep Delivery",
-      desc: "Fast and safe delivery of LPG cylinders across Itarsi with trained staff handling."
+      desc: "Fast and safe cylinder delivery across Itarsi with trained staff handling."
     },
     {
       icon: <MdBusinessCenter className="text-red-600 text-5xl" />,
-      title: "Commercial & Bulk Supply",
-      desc: "Reliable LPG supply for hotels, restaurants, industries, and commercial setups."
+      title: "Bulk & Commercial Orders",
+      desc: "Gas supply for hotels, factories, hospitals, and commercial setups."
     },
     {
       icon: <MdSecurity className="text-red-600 text-5xl" />,
-      title: "Safety Inspection & Support",
-      desc: "Leakage checks, regulator inspection, and emergency assistance to ensure safe LPG usage."
+      title: "Safety Inspection",
+      desc: "Leakage checks, valve inspection, and safety guidance for secure cylinder usage."
     },
     {
       icon: <MdAutorenew className="text-red-600 text-5xl" />,
       title: "Cylinder Replacement",
-      desc: "Easy and quick replacement of empty or faulty cylinders along with approved accessories."
+      desc: "Quick replacement of empty or faulty cylinders with approved fittings."
     },
     {
-      icon: <MdHeadsetMic className="text-red-600 text-5xl" />,
-      title: "Customer Support & Booking Help",
-      desc: "Friendly assistance, booking help, and transparent pricing for every customer (support till 8 PM)."
+      icon: <MdBuild className="text-red-600 text-5xl" />,
+      title: "Valves & Accessories",
+      desc: "Authorized regulators, pipes, and safety-approved gas accessories available on request."
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-orange-50 to-white" id="services">
-      <div className="container mx-auto px-6 text-center">
+    <section className="py-14 bg-gradient-to-b from-orange-50 to-white" id="services">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+          transition={{ duration: 0.5 }}
+          className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3"
         >
           Our Services
         </motion.h2>
@@ -60,26 +61,26 @@ export default function Services() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-gray-600 max-w-2xl mx-auto mb-12"
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="text-gray-600 max-w-md sm:max-w-xl mx-auto mb-10 text-sm sm:text-base"
         >
-          Om Gas Agency is a trusted LPG distributor in Itarsi, providing safe, fast,
-          and reliable gas solutions for households and businesses.
+          We provide safe, fast, and reliable gas solutions for industries,
+          hospitals, and commercial needs in Itarsi.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {services.map((s, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30, scale: 0.98 }}
+              initial={{ opacity: 0, y: 25, scale: 0.97 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.12, type: "spring", stiffness: 120 }}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-orange-100"
+              transition={{ delay: i * 0.1, duration: 0.4 }}
+              className="bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-orange-100"
             >
-              <div className="flex justify-center mb-4">{s.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-800">{s.title}</h3>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">{s.desc}</p>
+              <div className="flex justify-center mb-3 sm:mb-4">{s.icon}</div>
+              <h3 className="text-base sm:text-lg font-semibold text-gray-800">{s.title}</h3>
+              <p className="text-gray-600 text-xs sm:text-sm mt-3 leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>

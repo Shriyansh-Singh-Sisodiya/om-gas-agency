@@ -26,7 +26,7 @@ export default function Contact() {
             {
               icon: <FaPhoneAlt className="text-red-600 text-2xl" />,
               title: "Call Us",
-              value: "+91 9893009832",
+              value: "+91 7415511415",
               link: `tel:+${phoneNumber}`,
             },
             {
